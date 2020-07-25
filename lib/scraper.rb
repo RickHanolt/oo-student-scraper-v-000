@@ -35,7 +35,8 @@ class Scraper
         scraped_student[:blog] = temp_link
       end
     end
-    scraped_student[:bio] = doc.css("div.bio-content.content-holder div.description-holder p").children.css.text if doc.css("div.bio-content.content-holder div.description-holder p")
+    scraped_student[:bio] = doc.css("div.bio-content.content-holder div.description-holder p").text if profile_page.css("div.bio-content.content-holder div.description-holder p")
+
     scraped_student
   end
 
