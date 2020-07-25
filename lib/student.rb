@@ -18,7 +18,7 @@ class Student
   end
 
   def self.all
-
+    Scraper
   end
 
 end
