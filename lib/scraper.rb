@@ -35,6 +35,7 @@ class Scraper
         scraped_student[:blog] = temp_link
       end
     end
+    scraped_student[:bio] = doc.css("div.description-holder").children.css("p")
     scraped_student
   end
 
